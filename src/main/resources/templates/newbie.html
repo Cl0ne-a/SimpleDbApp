@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>New plant</title>
+</head>
+<body>
+<h1>New plant data: </h1>
+<a href="/plants">Back to list</a>
+<br/><br/>
+<form action="#" th:action="@{plants/newbie}" th:object="${com.lee.simpledbapp.Model.PlantDto}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <p>Height: <input type="text" th:field="*{height}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+<br/>
+</body>
+</html>

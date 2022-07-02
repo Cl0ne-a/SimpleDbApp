@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Plants</title>
+</head>
+<body>
+    <h1> Plant Store</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Height</th>
+        </tr>
+        <tr th:each="plant : ${plants}">
+            <td th:text="${plant.id}"></td>
+            <td th:text="${plant.name}"></td>
+            <td th:text="${plant.height}"></td>
+        </tr>
+        <td>
+            <a th:href="/newbie">Add new plant</a></td>
+    </table>
+
+</body>
+</html>
